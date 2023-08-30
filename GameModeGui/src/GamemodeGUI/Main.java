@@ -25,7 +25,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
-    @Override // override logger.... idk why plugins have that.
+    @Override // Override logger.... idk why plugins have that.
     public void onEnable() {
         getLogger().info("[GamemodeGUI] Plugin has been enabled!");
     }
@@ -105,7 +105,18 @@ static {
                 } else {
                 player.sendMessage(ChatColor.RED + "Error: You do not have the permission to use that command ");
                 }
+                    @Override
+		    public static loadConfig(Main plugin) {
+                    myconfig = new File(plugin.getDataFolder(), "plugin.yml");
+		    loadConfig(this);           
+	    }
 
+	      /*
+               * Locate folder I geuss.... deal with it.
+               *
+	      */
+	
+	
             }
 
             if (clicked.getType() == Material.IRON_BLOCK) {
